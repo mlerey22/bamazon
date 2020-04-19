@@ -67,6 +67,7 @@ function next() {
                     if (err) throw err;
                     if (stock < amount) {
                         console.log("We do not have that much in stock, please select less or another product")
+                        connection.end();
                     } else {
                         updateProduct(queryID, newStock);
                      
